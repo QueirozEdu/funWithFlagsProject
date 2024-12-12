@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google"; 
+import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 
 const notoSans = Noto_Sans({
   variable: "--font-geist-sans",
-  weight: ["400", "700"]
+  weight: ["400", "700"],
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -19,11 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${notoSans.className} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${notoSans.className} antialiased`}>{children}</body>
     </html>
   );
 }
