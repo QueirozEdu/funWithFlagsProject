@@ -21,7 +21,7 @@ const Card = ({
       <div className="aspect-video w-full">
         <Image
           src={flag || "https://placehold.co/600x400"}
-          alt={"Flag of ${name}"}
+          alt={`Flag of ${name}`}
           className="w-full h-full object-cover"
           width={500}
           height={300}
